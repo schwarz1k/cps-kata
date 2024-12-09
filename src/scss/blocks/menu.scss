@@ -1,0 +1,252 @@
+.menu {
+  display: flex;
+  margin: auto 16px auto 0;
+}
+
+.menu-burger {
+  border: none;
+
+  @media (min-width: 1440px) {
+    display: none;
+  }
+}
+
+.menu-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #FF3E79;
+  border-radius: 100%;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+
+  &:hover, &:focus {
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 0.6;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 16px;
+    height: 16px;
+    background-image: url('../img/menu/menu-burger-open.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--repair::after {
+    background-image: url('../img/menu/menu-repair.svg');
+    width: 20px;
+    height: 21px;
+  }
+
+  &--status::after {
+    background-image: url('../img/menu/menu-status.svg');
+    width: 20px;
+    height: 21px;
+  }
+
+  &--search {
+    display: none;
+
+    &:after {
+      background-image: url('../img/menu/menu-search.svg');
+      width: 20px;
+      height: 21px;
+      top: 10px;
+    }
+  }
+
+  &--call::after {
+    display: block;
+    background-image: url('../img/menu/menu-call.svg');
+  }
+
+  &--send::after {
+    display: block;
+    background-image: url('../img/menu/menu-send.svg');
+  }
+
+  &--profile::after {
+    display: block;
+    background-image: url('../img/menu/menu-profile.svg');
+  }
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 320px;
+  display: none;
+}
+
+.menu-list__link {
+  display: block;
+  padding: 16px 10px 16px 0;
+  font-family: "TT Lakes", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.01em;
+  color: #1b1c21;
+  cursor: pointer;
+}
+
+.menu-list__item {
+  max-width: 320px;
+
+  &:hover {
+    opacity: 0.7;
+    transition-property: opacity;
+    transition-duration: 0.4s;
+  }
+
+  &--active {
+    position: relative;
+
+    .menu-list__link {
+      color: #7e7e82;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: -24px;
+      width: 4px;
+      height: 32px;
+      background-color: #41F6D7;
+      border-radius: 0 50px 50px 0;
+    }
+  }
+}
+
+.menu-user {
+  display: flex;
+
+  @media (min-width: 768px) {
+    column-gap: 30px;
+  }
+  @media (min-width: 1440px) {
+    position: absolute;
+    top: 25px;
+    right: 0;
+  }
+}
+
+.menu-list__item {
+  @media (min-width: 1440px) {
+    position: relative;
+  }
+}
+
+.menu-user__item-text {
+  display: none;
+
+  @media (min-width: 1440px) {
+    white-space: nowrap;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &--repair {
+      left: -120px;
+    }
+
+    &--status {
+      right: 50px;
+    }
+  }
+}
+
+.menu-user__container {
+  display: flex;
+  column-gap: 16px;
+  margin: auto 0 auto 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: 1440px) {
+    column-gap: 16px;
+  }
+}
+
+.menu-user__main-container {
+
+  @media (min-width: 768px) {
+    order: 1;
+    position: relative;
+  }
+
+  &:after {
+
+    @media (min-width: 768px) {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -15px;
+      transform: translateY(-50%);
+      width: 2px;
+      height: 32px;
+      background-color: #eaeaea;
+    }
+
+    @media (min-width: 1440px) {
+      background-color: transparent;
+    }
+  }
+
+  & .visually-hidden {
+
+    @media (min-width: 1440px) {
+      display: block;
+    }
+  }
+}
+
+.menu-user__item--search {
+  display: none;
+}
+
+.menu-user__second-container {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
+
+  @media (min-width: 1440px) {
+    display: none;
+  }
+}
+
+.menu-user__item-link {
+
+  @media (min-width: 1440px) {
+    font-family: "TT Lakes", "Arial", sans-serif;
+    text-decoration: none;
+    position: relative;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+    color: #1b1c21;
+
+    & span {
+      width: 150px;
+      top: 8px;
+      position: absolute;
+      left: -130px;
+    }
+  }
+}

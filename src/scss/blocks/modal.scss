@@ -1,0 +1,140 @@
+.modal {
+  background-color: white;
+  width: 320px;
+  min-height: 100vh;
+  padding: 24px 0 24px 0;
+  margin-left: auto;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+
+  &--feedback {
+    min-height: 988px;
+
+    @media (min-width: 1120px) {
+      left: calc(50% - 560px);
+    }
+
+    @media (min-width: 1440px) {
+      width: 440px;
+      right: 0;
+    }
+    &-hidden {
+      display: none;
+    }
+  }
+  &--call {
+    min-height: 988px;
+
+    @media (min-width: 1120px) {
+      left: calc(50% - 560px);
+    }
+
+    @media (min-width: 1440px) {
+      width: 440px;
+      right: 0;
+    }
+    &-hidden {
+      display: none;
+    }
+  }
+
+  &__content { }
+
+  &__closed {
+    position: relative;
+    margin: 0 0 32px 24px;
+    &::after {
+      background-image: url("../img/menu/menu-burger-closed.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__title {
+    padding: 0 0 0 23px;
+  }
+
+  &__feedback {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 114%;
+    color: #7e7e82;
+
+    &-link {
+      color: $btn;
+      text-decoration: none;
+
+      &:hover, &:focus {
+        opacity: 0.8;
+      }
+      &:active {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &__form {
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    &-label { }
+    &-input {
+      font-family: $font-family;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: -0.01em;
+      color: #b5b6bc;
+      padding: 12px 16px;
+      border: 1px solid #eaeaea;
+      border-radius: 8px;
+
+      &:hover, &:focus {
+        border-color: #ff3e79;
+        outline: none;
+      }
+      &:active {
+        border-color: #ff3e79;
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &__button {
+    background-color: $btn;
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 200%;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    padding-left: 13px;
+    color: $basic-white;
+    text-align: left;
+    width: 119px;
+    height: 32px;
+    border: none;
+    border-radius: 16px;
+    position: relative;
+    cursor: pointer;
+    margin-left: auto;
+    -webkit-appearance: none;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 7px;
+      height: 10px;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-image: url("../img/price/price-arrow-white.svg");
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}

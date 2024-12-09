@@ -1,0 +1,29 @@
+.language-switcher {
+  flex-direction: row;
+  margin-left: -6px;
+}
+
+.language-switcher__button {
+  border: none;
+  background-color: transparent;
+
+  &:hover {
+    color: #41F6D7;
+    transition-property: color;
+    transition-duration: 0.4s;
+  }
+
+  @extend %footer-menu__link-styles;
+}
+
+.language-switcher {
+  &__item {
+    &--active {
+      & .language-switcher__button {
+        color: #7e7e82;
+      }
+    }
+  }
+
+  @extend %footer-menu__list-styles;
+}

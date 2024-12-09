@@ -1,0 +1,14 @@
+.page-main--hidden * {
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.65;
+}
+
+.page-main {
+
+  @media (min-width: 1440px) {
+    position: relative;
+    max-width: 1120px;
+    margin: 0 0 0 auto;
+  }
+}

@@ -1,0 +1,26 @@
+// Vendor
+@import "~normalize.css";
+
+// Global
+@import "./global/variables.scss";
+@import "./global/global.scss";
+@import "./global/fonts.scss";
+@import "./global/visually-hidden.scss";
+@import "./global/title.scss";
+@import "./global/button.scss";
+
+// Blocks
+@import "blocks/body-content.scss";
+@import "./blocks/page-header.scss";
+@import "./blocks/menu.scss";
+@import "./blocks/logo.scss";
+@import "./blocks/footer-menu.scss";
+@import "./blocks/language-switcher.scss";
+@import "./blocks/page-main.scss";
+@import "./blocks/services.scss";
+@import "./blocks/brands.scss";
+@import "./blocks/tech.scss";
+@import "./blocks/price.scss";
+@import "./blocks/page-footer.scss";
+@import "blocks/modal.scss";
+

@@ -4,7 +4,7 @@
   font-size: 16px;
   line-height: 150%;
   letter-spacing: -0.01em;
-  color: #1b1c21;
+  color: $basic-black;
   margin: 0;
   display: inline-block;
   background-color: transparent;
@@ -29,16 +29,16 @@
   }
 
   &:hover {
-    color: lighten(#ff3e79, 10%);
+    color: lighten($pink, 10%);
     padding-left: 30px;
 
     &:focus {
       outline: none;
-      color: lighten(#ff3e79, 15%);
+      color: lighten($pink, 15%);
     }
 
     &:active {
-      color: darken(#ff3e79, 15%);
+      color: darken($pink, 15%);
       transform: scale(0.98);
     }
   }

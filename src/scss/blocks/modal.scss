@@ -1,5 +1,5 @@
 .modal {
-  background-color: white;
+  background-color: $basic-white;
   width: 320px;
   min-height: 100vh;
   padding: 24px 0 24px 0;
@@ -59,10 +59,10 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 114%;
-    color: #7e7e82;
+    color: $basic-gray;
 
     &-link {
-      color: $btn;
+      color: $pink;
       text-decoration: none;
 
       &:hover, &:focus {
@@ -86,24 +86,24 @@
       font-size: 16px;
       line-height: 150%;
       letter-spacing: -0.01em;
-      color: #b5b6bc;
+      color: $pagination-secondary;
       padding: 12px 16px;
-      border: 1px solid #eaeaea;
+      border: 1px solid $secondary-gray;
       border-radius: 8px;
 
       &:hover, &:focus {
-        border-color: #ff3e79;
+        border-color: $pink;
         outline: none;
       }
       &:active {
-        border-color: #ff3e79;
+        border-color: $pink;
         opacity: 0.6;
       }
     }
   }
 
   &__button {
-    background-color: $btn;
+    background-color: $pink;
     font-family: $font-family;
     font-weight: 700;
     font-size: 12px;

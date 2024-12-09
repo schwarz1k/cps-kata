@@ -8,7 +8,7 @@
   background-color: transparent;
 
   &:hover {
-    color: #41F6D7;
+    color: $aqua;
     transition-property: color;
     transition-duration: 0.4s;
   }
@@ -20,7 +20,7 @@
   &__item {
     &--active {
       & .language-switcher__button {
-        color: #7e7e82;
+        color: $basic-gray;
       }
     }
   }

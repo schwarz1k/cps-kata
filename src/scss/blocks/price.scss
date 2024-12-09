@@ -21,7 +21,7 @@
   right: -8px;
   width: 24px;
   height: 210px;
-  background: linear-gradient(270deg, #f8f8f8 0.04%, rgba(248, 248, 248, 0) 100%);
+  background: linear-gradient(270deg, $primary-bg 0.04%, rgba(248, 248, 248, 0) 100%);
 
   @media (min-width: 376px) {
     top: 60px;
@@ -36,14 +36,14 @@
   display: block;
   margin: 0;
   padding: 16px 24px;
-  background: linear-gradient(90deg, #f8f8f8 0%, #ffffff 100%);
+  background: linear-gradient(90deg, $primary-bg 0%, $basic-white 100%);
   font-family: "TT Lakes", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: -0.01em;
   text-transform: uppercase;
-  color: #7e7e82;
+  color: $basic-gray;
 
   @media (min-width: 1120px) {
     padding: 16px 32px;
@@ -82,8 +82,8 @@
 .price__item {
   padding: 16px;
   margin: 0;
-  background-color: #ffffff;
-  border: 1px solid #eaeaea;
+  background-color: $basic-white;
+  border: 1px solid $secondary-gray;
   border-radius: 6px;
   box-sizing: border-box;
   min-height: 200px;
@@ -108,7 +108,7 @@
       content: "";
       width: calc(100% - 30px);
       height: 1px;
-      background-color: #eaeaea;
+      background-color: $secondary-gray;
       left: 50%;
       transform: translateX(-50%);
       bottom: 0;
@@ -150,7 +150,7 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 114%;
-  color: #7e7e82;
+  color: $basic-gray;
   margin: 0 0 4px 0;
 
   @media (min-width: 768px) {
@@ -160,13 +160,13 @@
 
 .price__item-subtitle {
   letter-spacing: 0.01em;
-  color: #1b1c21;
+  color: $basic-black;
 
   &:first-child {
     font-weight: 500;
     font-size: 14px;
     line-height: 114%;
-    color: #7e7e82;
+    color: $basic-gray;
   }
 }
 
@@ -179,7 +179,7 @@
 }
 
 .price__item-button {
-  background-color: $btn;
+  background-color: $pink;
   font-family: $font-family;
   font-weight: 700;
   font-size: 12px;
@@ -217,12 +217,12 @@
 }
 
 .price__pagination .swiper-pagination-bullet {
-  background-color: #625f5f;
-  -webkit-tap-highlight-color: #b5b6bc;
+  background-color: $pagination-primary;
+  -webkit-tap-highlight-color: $pagination-secondary;
 }
 
 .price__pagination .swiper-pagination-bullet-active {
-  background-color: #b5b6bc;
+  background-color: $pagination-secondary;
 }
 
 .price__description {
@@ -231,13 +231,13 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  border-bottom: 1px solid #d9fff5 ;
+  border-bottom: 1px solid $border ;
 }
 
 .price__description-title {
   line-height: 143%;
   letter-spacing: 0.01em;
-  color: #1b1c21;
+  color: $basic-black;
   margin: 0;
 }
 
@@ -247,7 +247,7 @@
   font-size: 16px;
   line-height: 150%;
   letter-spacing: -0.01em;
-  color: #1b1c21;
+  color: $basic-black;
   text-align: left;
   border: none;
   background-color: transparent;

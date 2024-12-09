@@ -26,7 +26,7 @@
     transform: translateY(-50%);
     width: 24px;
     height: 60px;
-    background: linear-gradient(270deg, #f8f8f8 0.04%, rgba(248, 248, 248, 0) 100%);
+    background: linear-gradient(270deg, $primary-bg 0.04%, rgba(248, 248, 248, 0) 100%);
 
     @media (min-width: 768px) {
       top: 95px;
@@ -102,16 +102,16 @@
       }
 
       &--active {
-        border: 2px solid #b8ffec;
-        background-color: #ffffff;
+        border: 2px solid $light-aqua;
+        background-color: $basic-white;
       }
 
       &:hover, &:focus {
-        border: 2px solid #cccccc;
+        border: 2px solid $silver;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
       }
       &:active {
-        border: 2px solid #cccccc;
+        border: 2px solid $silver;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
         opacity: 0.6;
       }
@@ -121,7 +121,7 @@
       display: block;
       padding: 8px 18px;
       text-decoration: none;
-      color: #7e7e82;
+      color: $basic-gray;
       white-space: nowrap;
       font-size: 16px;
       letter-spacing: -0.01em;
@@ -180,7 +180,7 @@
     &-description {
       margin: 0;
       padding: 0 0 16px;
-      color: #1b1c21;
+      color: $basic-black;
 
       @media (min-width: 768px) {
         padding: 0;

@@ -14,7 +14,7 @@
 .menu-icon {
   width: 40px;
   height: 40px;
-  background-color: #FF3E79;
+  background-color: $pink;
   border-radius: 100%;
   cursor: pointer;
   position: relative;
@@ -97,7 +97,7 @@
   font-size: 16px;
   line-height: 150%;
   letter-spacing: -0.01em;
-  color: #1b1c21;
+  color: $basic-black;
   cursor: pointer;
 }
 
@@ -114,7 +114,7 @@
     position: relative;
 
     .menu-list__link {
-      color: #7e7e82;
+      color: $basic-gray;
     }
 
     &:after {
@@ -124,7 +124,7 @@
       left: -24px;
       width: 4px;
       height: 32px;
-      background-color: #41F6D7;
+      background-color: $aqua;
       border-radius: 0 50px 50px 0;
     }
   }
@@ -198,7 +198,7 @@
       transform: translateY(-50%);
       width: 2px;
       height: 32px;
-      background-color: #eaeaea;
+      background-color: $secondary-gray;
     }
 
     @media (min-width: 1440px) {
@@ -240,7 +240,7 @@
     font-size: 16px;
     line-height: 150%;
     letter-spacing: -0.01em;
-    color: #1b1c21;
+    color: $basic-black;
 
     & span {
       width: 150px;

@@ -1,16 +1,16 @@
 .title {
   margin: 0;
   position: relative;
-}
 
-.title::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  width: 4px;
-  height: 40px;
-  background-color: #41F6D7;
-  border-radius: 0 50px 50px 0;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 40px;
+    background-color: $aqua;
+    border-radius: 0 50px 50px 0;
+  }
 }

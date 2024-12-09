@@ -16,7 +16,7 @@
     transform: translateY(-50%);
     width: 2px;
     height: 32px;
-    background-color: #eaeaea;
+    background-color: $secondary-gray;
 
     @media (min-width: 768px) {
       left: -15px;

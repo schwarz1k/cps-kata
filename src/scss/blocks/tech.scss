@@ -21,7 +21,7 @@
   right: -8px;
   width: 24px;
   height: 170px;
-  background: linear-gradient(270deg, #f8f8f8 0.04%, rgba(248, 248, 248, 0) 100%);
+  background: linear-gradient(270deg, $primary-bg 0.04%, rgba(248, 248, 248, 0) 100%);
 
   @media (min-width: 376px) {
     top: 60px;
@@ -36,14 +36,14 @@
   display: block;
   margin: 0;
   padding: 16px 24px;
-  background: linear-gradient(90deg, #f8f8f8 0%, #ffffff 100%);
+  background: linear-gradient(90deg, $primary-bg 0%, $basic-white 100%);
   font-family: "TT Lakes", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: -0.01em;
   text-transform: uppercase;
-  color: #7e7e82;
+  color: $basic-gray;
 
   @media (min-width: 1120px) {
     padding: 16px 32px;
@@ -93,8 +93,8 @@
 
 .tech__item {
   margin: 0;
-  background-color: #ffffff;
-  border: 1px solid #eaeaea;
+  background-color: $basic-white;
+  border: 1px solid $secondary-gray;
   border-radius: 6px;
   box-sizing: border-box;
   display: flex;
@@ -103,8 +103,8 @@
   padding: 0;
 
   &:hover, &:focus {
-    background-color: #f9f9f9;
-    border-color: #cccccc;
+    background-color: $light-gray;
+    border-color: $silver;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   }
 
@@ -123,7 +123,7 @@
   font-size: 16px;
   line-height: 150%;
   letter-spacing: -0.01em;
-  color: #1b1c21;
+  color: $basic-black;
   width: 100%;
   height: 100%;
 }
@@ -135,7 +135,7 @@
   right: 16px;
   width: 40px;
   height: 40px;
-  border: 2px solid #ff3e79;
+  border: 2px solid $pink;
   border-radius: 50%;
 }
 
@@ -174,10 +174,10 @@
 }
 
 .swiper-pagination-bullet {
-  background-color: #625f5f;
+  background-color: $pagination-primary;
   -webkit-tap-highlight-color: transparent;
 }
 
 .tech__pagination .swiper-pagination-bullet-active {
-  background-color: #b5b6bc;
+  background-color: $pagination-secondary;
 }

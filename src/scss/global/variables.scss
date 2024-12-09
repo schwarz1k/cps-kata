@@ -1,14 +1,23 @@
 // Viewports
-$tablet-width: 768px;
-$desktop-width: 1440px;
 $mobile-width-only: 767px;
+$tablet-width: 768px;
+$small-desktop-width: 768px;
+$desktop-width: 1440px;
 
 // Fonts
 $font-family: "TT Lakes", "Arial", sans-serif;
 
 // Colors
 $basic-white: #ffffff;
-$divider: #41f6d7;
-$btn: #ff3e79;
+$basic-black: #1b1c21;
+$basic-gray: #7e7e82;
+$secondary-gray: #eaeaea;
+$light-gray: #f9f9f9;
+$silver: #cccccc;
+$aqua: #41f6d7;
+$light-aqua: #b8ffec;
+$pink: #ff3e79;
 $primary-bg: #f8f8f8;
 $border: #d9fff5;
+$pagination-primary: #625f5f;
+$pagination-secondary: #b5b6bc;

@@ -1,12 +1,13 @@
-.page-main--hidden * {
-  pointer-events: none;
-  user-select: none;
-  opacity: 0.65;
-}
-
 .page-main {
+  &--hidden {
+    * {
+      pointer-events: none;
+      user-select: none;
+      opacity: 0.65;
+    }
+  }
 
-  @media (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     position: relative;
     max-width: 1120px;
     margin: 0 0 0 auto;

@@ -1,14 +1,14 @@
 .brands__container {
-  padding: 0 24px;
+  padding: 0 16px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     max-width: 100%;
     padding: 24px;
   }
 
-  @media (min-width: 1120px) {
+  @media (min-width: $small-desktop-width) {
     max-width: 100%;
-    padding: 24px 32px;
+    padding: 24px 24px;
   }
 }
 
@@ -16,14 +16,14 @@
   overflow: hidden;
   position: relative;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     padding: 0;
     max-width: 1120px;
     margin: 0 auto;
     min-height: 322px;
   }
 
-  @media (min-width: 1120px) {
+  @media (min-width: $small-desktop-width) {
     max-width: 1120px;
   }
 
@@ -37,11 +37,11 @@
     height: 100px;
     background: linear-gradient(270deg, $primary-bg 0.04%, rgba(248, 248, 248, 0) 100%);
 
-    @media (min-width: 376px) {
+    @media (min-width: $tablet-width) {
       top: 60px;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: $tablet-width) {
       display: none;
     }
   }
@@ -50,7 +50,7 @@
 .brands__title {
   display: block;
   margin: 0;
-  padding: 16px 24px;
+  padding: 24px 16px;
   background: linear-gradient(90deg, $primary-bg 0%, $basic-white 100%);
   font-family: "TT Lakes", "Arial", sans-serif;
   font-weight: 400;
@@ -60,8 +60,8 @@
   text-transform: uppercase;
   color: $basic-gray;
 
-  @media (min-width: 1120px) {
-    padding: 16px 32px;
+  @media (min-width: $small-desktop-width) {
+    padding: 16px 24px;
   }
 }
 
@@ -69,7 +69,7 @@
   margin: 0;
   padding: 16px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     padding: 0;
     margin: 0;
     list-style-type: none;
@@ -78,13 +78,13 @@
     gap: 16px 24px;
   }
 
-  @media (min-width: 1120px) {
+  @media (min-width: $small-desktop-width) {
     grid-template-columns: repeat(4, 240px);
     gap: 16px 32px;
   }
 
-  &--hidden.swiper-wrapper {
-    @media (min-width: 768px) {
+  &--hidden {
+    @media (min-width: $tablet-width) {
       max-height: 160px;
       overflow: hidden;
     }
@@ -144,6 +144,12 @@
 }
 
 .brands__button {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+
   &--more {
     &:after {
       transform: rotate(180deg) translateY(50%);

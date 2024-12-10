@@ -1,282 +1,287 @@
 .price {
   overflow: hidden;
   position: relative;
-  @media (min-width: 768px) {
+
+  @media (min-width: $tablet-width) {
     padding: 0;
     max-width: 1120px;
     margin: 0 auto;
     min-height: 322px;
   }
 
-  @media (min-width: 1120px) {
+  @media (min-width: $small-desktop-width) {
     max-width: 1120px;
   }
-}
 
-.price::after {
-  content: '';
-  position: absolute;
-  top: 68px;
-  z-index: 5;
-  right: -8px;
-  width: 24px;
-  height: 210px;
-  background: linear-gradient(270deg, $primary-bg 0.04%, rgba(248, 248, 248, 0) 100%);
-
-  @media (min-width: 376px) {
-    top: 60px;
-  }
-
-  @media (min-width: 768px) {
-    display: none;
-  }
-}
-
-.price__title {
-  display: block;
-  margin: 0;
-  padding: 16px 24px;
-  background: linear-gradient(90deg, $primary-bg 0%, $basic-white 100%);
-  font-family: "TT Lakes", "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: -0.01em;
-  text-transform: uppercase;
-  color: $basic-gray;
-
-  @media (min-width: 1120px) {
-    padding: 16px 32px;
-  }
-}
-
-.price__container {
-  padding: 0 24px;
-
-  @media (min-width: 768px) {
-    max-width: 100%;
-    padding: 24px;
-  }
-
-  @media (min-width: 1120px) {
-    max-width: 100%;
-    padding: 24px 32px;
-  }
-}
-
-.price__list {
-  margin: 0;
-  padding: 16px;
-  position: relative;
-
-  @media (min-width: 768px) {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: repeat(1, 100%);
-    gap: 0;
-  }
-}
-
-.price__item {
-  padding: 16px;
-  margin: 0;
-  background-color: $basic-white;
-  border: 1px solid $secondary-gray;
-  border-radius: 6px;
-  box-sizing: border-box;
-  min-height: 200px;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  gap: 16px;
-
-  @media (min-width: 768px) {
-    border: none;
-    border-radius: 0;
-    display: grid;
-    flex-direction: row;
-    grid-template-columns: 342px 74px 81px 119px;
-    gap: 0;
-    min-height: 64px;
-    align-items: center;
-    position: relative;
-
-    &::after {
-      position: absolute;
-      content: "";
-      width: calc(100% - 30px);
-      height: 1px;
-      background-color: $secondary-gray;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: 0;
-    }
-  }
-
-  &:nth-child(1) {
-    display: none;
-
-    @media (min-width: 768px) {
-      display: grid;
-      background-color: transparent;
-    }
-  }
-
-  &:nth-child(1)::after {
-    @media (min-width: 768px) {
-      background-color: transparent;
-    }
-  }
-  &:last-child::after {
-    @media (min-width: 768px) {
-      background-color: transparent;
-    }
-  }
-}
-
-.price__item-wrapper {
-  display: flex;
-  flex-direction: column;
-
-  @media (min-width: 768px) {
-   flex-direction: row;
-  }
-}
-
-.price__item-title {
-  font-family: $font-family;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 114%;
-  color: $basic-gray;
-  margin: 0 0 4px 0;
-
-  @media (min-width: 768px) {
-    display: none;
-  }
-}
-
-.price__item-subtitle {
-  letter-spacing: 0.01em;
-  color: $basic-black;
-
-  &:first-child {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 114%;
-    color: $basic-gray;
-  }
-}
-
-.price__item-wrapper--btn {
-  margin: -60px 0 0 auto;
-
-  @media (min-width: 768px) {
-    margin: 0;
-  }
-}
-
-.price__item-button {
-  background-color: $pink;
-  font-family: $font-family;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 200%;
-  letter-spacing: -0.01em;
-  text-transform: uppercase;
-  padding-left: 13px;
-  color: $basic-white;
-  text-align: left;
-  width: 119px;
-  height: 32px;
-  border: none;
-  border-radius: 16px;
-  position: relative;
-  cursor: pointer;
-
-  &:after {
+  &::after {
     content: '';
     position: absolute;
-    width: 7px;
-    height: 10px;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    background-image: url("../img/price/price-arrow-white.svg");
-  }
+    top: 68px;
+    z-index: 5;
+    right: -8px;
+    width: 24px;
+    height: 210px;
+    background: linear-gradient(270deg, $primary-bg 0.04%, rgba(248, 248, 248, 0) 100%);
 
-  &:hover {
-    opacity: 0.6;
-  }
-}
+    @media (min-width: 376px) {
+      top: 60px;
+    }
 
-.price__pagination {
-  position: static;
-}
-
-.price__pagination .swiper-pagination-bullet {
-  background-color: $pagination-primary;
-  -webkit-tap-highlight-color: $pagination-secondary;
-}
-
-.price__pagination .swiper-pagination-bullet-active {
-  background-color: $pagination-secondary;
-}
-
-.price__description {
-  width: 100%;
-  padding: 16px 24px 40px 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  border-bottom: 1px solid $border ;
-}
-
-.price__description-title {
-  line-height: 143%;
-  letter-spacing: 0.01em;
-  color: $basic-black;
-  margin: 0;
-}
-
-.price__description-button {
-  font-family: $font-family;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: -0.01em;
-  color: $basic-black;
-  text-align: left;
-  border: none;
-  background-color: transparent;
-  padding: 0;
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-
-  @media (min-width: 341px) {
-    width: 100%;
-  }
-
-  &:after {
-      content: '';
-      position: absolute;
-      width: 7px;
-      height: 12px;
-      left: 115px;
-      bottom: 5px;
-      background-image: url("../img/price/price-arrow-pink.svg");
-      background-repeat: no-repeat;
-
-    @media (min-width: 341px) {
-      left: 300px;
+    @media (min-width: $tablet-width) {
+      display: none;
     }
   }
 
-  &:hover {
-    opacity: 0.6;
+  &__title {
+    display: block;
+    margin: 0;
+    padding: 24px 16px;
+    background: linear-gradient(90deg, $primary-bg 0%, $basic-white 100%);
+    font-family: "TT Lakes", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: $basic-gray;
+
+    @media (min-width: $small-desktop-width) {
+      padding: 16px 24px;
+    }
+  }
+
+  &__container {
+    padding: 0 16px;
+
+    @media (min-width: $tablet-width) {
+      max-width: 100%;
+      padding: 24px;
+    }
+
+    @media (min-width: $small-desktop-width) {
+      max-width: 100%;
+      padding: 24px 24px;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 16px;
+    position: relative;
+
+    @media (min-width: $tablet-width) {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+      display: grid;
+      grid-template-columns: repeat(1, 100%);
+      gap: 0;
+    }
+  }
+
+  &__item {
+    padding: 16px;
+    margin: 0;
+    background-color: $basic-white;
+    border: 1px solid $secondary-gray;
+    border-radius: 6px;
+    box-sizing: border-box;
+    min-height: 200px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 16px;
+
+    @media (min-width: $tablet-width) {
+      border: none;
+      border-radius: 0;
+      display: grid;
+      flex-direction: row;
+      grid-template-columns: 342px 74px 81px 119px;
+      gap: 0;
+      min-height: 64px;
+      align-items: center;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: calc(100% - 30px);
+        height: 1px;
+        background-color: $secondary-gray;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+      }
+    }
+
+    &:nth-child(1) {
+      display: none;
+
+      @media (min-width: $tablet-width) {
+        display: grid;
+        background-color: transparent;
+      }
+
+      &::after {
+        @media (min-width: $tablet-width) {
+          background-color: transparent;
+        }
+      }
+    }
+
+    &:last-child::after {
+      @media (min-width: $tablet-width) {
+        background-color: transparent;
+      }
+    }
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+
+      @media (min-width: $tablet-width) {
+        flex-direction: row;
+      }
+    }
+
+    &-title {
+      font-family: $font-family;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 114%;
+      color: $basic-gray;
+      margin: 0 0 4px 0;
+
+      @media (min-width: $tablet-width) {
+        display: none;
+      }
+    }
+
+    &-subtitle {
+      letter-spacing: 0.01em;
+      color: $basic-black;
+
+      &:first-child {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 114%;
+        color: $basic-gray;
+      }
+    }
+
+    &-wrapper--btn {
+      margin: -60px 0 0 auto;
+
+      @media (min-width: $tablet-width) {
+        margin: 0;
+      }
+    }
+
+    &-button {
+      background-color: $pink;
+      font-family: $font-family;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 200%;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      padding-left: 13px;
+      color: $basic-white;
+      text-align: left;
+      width: 119px;
+      height: 32px;
+      border: none;
+      border-radius: 16px;
+      position: relative;
+      cursor: pointer;
+
+      &:after {
+        content: '';
+        position: absolute;
+        width: 7px;
+        height: 10px;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url("../img/price/price-arrow-white.svg");
+      }
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &__pagination {
+    position: static;
+
+    .swiper-pagination-bullet {
+      background-color: $pagination-primary;
+      -webkit-tap-highlight-color: $pagination-secondary;
+
+      &-active {
+        background-color: $pagination-secondary;
+      }
+    }
+  }
+
+  &__description {
+    width: 100%;
+    padding: 16px 24px 40px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-bottom: 1px solid $border;
+
+    @media (min-width: $tablet-width) {
+      padding: 16px 24px 40px 24px;
+    }
+
+    &-title {
+      line-height: 143%;
+      letter-spacing: 0.01em;
+      color: $basic-black;
+      margin: 0;
+    }
+
+    &-button {
+      font-family: $font-family;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: -0.01em;
+      color: $basic-black;
+      text-align: left;
+      border: none;
+      background-color: transparent;
+      padding: 0;
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+
+      @media (min-width: 341px) {
+        width: 100%;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        width: 7px;
+        height: 12px;
+        left: 115px;
+        bottom: 5px;
+        background-image: url("../img/price/price-arrow-pink.svg");
+        background-repeat: no-repeat;
+
+        @media (min-width: 341px) {
+          left: 300px;
+        }
+      }
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
   }
 }
-

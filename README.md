@@ -1,1 +1,1 @@
-https://schwarz1k.github.io/cps-kata/
+https://schwarz1k.github.io/kata-final/

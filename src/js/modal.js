@@ -24,6 +24,7 @@ sendBtn.addEventListener('click', () => {
 feedbackClosedBtn.addEventListener('click', () => {
   feedbackContainer.classList.add('modal--feedback-hidden');
   menuHeader.classList.remove('page-header__container--modal');
+  mainEl.classList.remove('page-main--hidden');
 });
 
 callBtn.addEventListener('click', () => {
@@ -35,6 +36,7 @@ callBtn.addEventListener('click', () => {
 callClosedBtn.addEventListener('click', () => {
   callContainer.classList.add('modal--call-hidden');
   menuHeader.classList.remove('page-header__container--modal');
+  mainEl.classList.remove('page-main--hidden');
 });
 
 document.addEventListener('keydown', function(evt) {
